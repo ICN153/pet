@@ -1,35 +1,45 @@
 <!DOCTYPE html>
-<html lang="pt-br"> 
- <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/styles.css">
-  <title>Petpark</title>
-</head>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Petpark</title>
+  </head>
 
   <body>
-
-
     <header class="cabecalho">
-
-       <div class="btn-menu">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>    
-
-
+      
+      <div class="navegacao-bar">
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </div>
       <div class="alinhamento-cabecalho container">
-        <img src="./assets/logo.png" alt="Logotipo do Petpark" />
+        <img class="img-logo" src="./assets/logo.png" alt="Logotipo do Petpark" />
         <label class="label-busca" for="campo-busca">
           <input
             class="input-busca"
@@ -42,30 +52,25 @@
           </div>
         </label>
         <button class="botao-login">
-          <img
-            class="icone-login"
-            src="./assets/icones/login.png"
-            alt="ícone de login"
-          />
-          Login/Cadastro
+          <img class="icone-login" src="./assets/icones/login.png"alt="ícone de login"/>Login/Cadastro
         </button>
       </div>
       <nav class="navegacao container">
-        <ul class="menu-lista">
-          <li class="menu-item">
-            <a class="menu-link" href="#">Raças</a>
+        <ul class="nav-list">
+          <li>
+            <a href="#">Raças</a>
           </li>
-          <li class="menu-item">
-            <a class="menu-link" href="#">Planos Pet</a>
+          <li>
+            <a href="#">Planos Pet</a>
           </li>
-          <li class="menu-item">
-            <a class="menu-link" href="#">Serviços</a>
+          <li>
+            <a href="#">Serviços</a>
           </li>
-          <li class="menu-item">
-            <a class="menu-link" href="#">Sobre nós</a>
+          <li>
+            <a href="#">Sobre nós</a>
           </li>
-          <li class="menu-item">
-            <a class="menu-link" href="#">Clube de descontos</a>
+          <li>
+            <a>Clube de descontos</a>
           </li>
         </ul>
       </nav>
@@ -306,14 +311,15 @@
       </div>
     </footer>
 
- <script>
-  const botaoMenu = document.querySelector('.btn-menu');
-  const menu = document.querySelector('.navegacao');
+    <script>
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const navList = document.querySelector('.nav-list');
 
-  botaoMenu.addEventListener('click', () => {
-    menu.classList.toggle('ativo');
+  mobileMenu.addEventListener('click', () => {
+    navList.classList.toggle('active');
   });
 </script>
+
 
   </body>
 </html>
